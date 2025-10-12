@@ -10,7 +10,6 @@ const selectPage = () => {
             anchor.classList.add("__isActive")
         } else {
             anchor.classList.remove("__isActive")
-            console.log(anchor.href, currentPage)
         }
     })
 
