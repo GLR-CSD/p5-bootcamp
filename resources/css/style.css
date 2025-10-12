@@ -107,6 +107,14 @@ kbd {
 
     h2 {
         margin: 0;
+       a {
+            color: #fff;
+            text-decoration: none;
+            border: 0 none transparent;
+            &:hover {
+                translate: 0 0;
+            }
+       } 
     }
 
     h3 {

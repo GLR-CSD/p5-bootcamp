@@ -5,7 +5,7 @@ const selectPage = () => {
         iframe.src=currentPage
     })
     
-    document.querySelectorAll(".sidebar a").forEach(anchor => {
+    document.querySelectorAll(".sidebar ul a").forEach(anchor => {
         if (anchor.href == currentPage) {
             anchor.classList.add("__isActive")
         } else {
