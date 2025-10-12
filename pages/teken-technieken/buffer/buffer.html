@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../../libraries/p5.min.js"></script>
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+</head>
+<body>
+    <header class="page-header dark">
+        <h1>Afbeeldingsbuffer</h1>
+        <p>Een afbeeldingsbuffer is eigenlijk niets meer dan een canvas die je niet gelijk ziet. Je kunt er op dezelfde manier in tekenen zoals je dat bij een gewoon canvas doet, maar je doet dit in het geheugen van het programma.
+            Hierdoor kun je illlustraties maken die je later in je hoofdcanvas kunt tekenen. In dit voorbeeld maken we een buffer waar we 1 cirkel en 1 vierkant op tekenen, en deze buffer tekenen we vervolgens meerdere keren op het hoofdcanvas met een for-lus over de x-as.
+        </p>
+        <span class="info">Voor meer uitleg over de createGraphics functie, zie: <a href="https://p5js.org/reference/p5/createGraphics" target="_blank">https://p5js.org/reference/p5/createGraphics</a></span>
+    </header>
+
+    <div class="page-content">
+        <div id="p5-container"></div>
+        <p>
+            Wat handig is aan P5 is dat je gewoon een nieuw bestand met canvas aan kunt maken om je tekening in te maken, zodat je kunt zien wat je doet.
+            Daarna kun je de code hergebruiken als afbeeldingsbuffer door createGraphics te gebruiken in plaats van createCanvas.
+            Je moet er dan alleen nog voor zorgen dat je alle P5 code pre-fixed met de variabel naam van je buffer. Dus fill wordt bufferNaam.fill, rect wordt bufferNaam.rect etc.
+        </p>
+    </div>
+    
+    <script src="buffer.js"></script>
+
+
+    <!-- Deze lijnen voegen de code onderaan automatisch toe aan de pagina -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/monokai.min.css">
+    <script src="../../../resources/javascript/code-viewer.js"></script>
+</body>
+</html>
