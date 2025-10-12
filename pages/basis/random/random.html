@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../../libraries/p5.min.js"></script>
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+</head>
+<body>
+    <header class="page-header dark">
+        <h1>Willekeurige achtergrondkleur & emoji's</h1>
+        <p>Met de random functie kun je een willekeurig getal genereren. Dit kun je doen door 2 cijfer op te geven (een min & een max), of door een array mee te geven. In deze demo zie je dat we de achtergrondkleur bepalen door 3 willekeurige cijfers te genereren (in combinatie met de <a href="./../kleurmodus/hsl.html">HSL</a> kleurmodus), en twee <a href="./../../vormen/tekst/tekst.html">tekst</a> elementen waar we een willkeurige emoji mee laten zien uit de emoji array.</p>
+        <span class="info">Voor meer uitleg over de setup functie, zie: <a href="https://p5js.org/reference/p5/setup" target="_blank">https://p5js.org/reference/p5/setup</a></span>
+    </header>
+
+    <div class="page-content">
+        <div id="p5-container"></div>
+        <p>
+            Met dit voorbeeld worden er drie verschillende dingen getoond. Allereerst zie je dat de achtergrondkleur iedere keer dat je de pagina ververst veranderd. 
+            Dit komt doordat we de achtergrondkleur bepalen met drie willekeurige variabelen, de hue, saturation en lightness. Daarnaast zie je twee emoji's die ook willekeurig gekozen 
+            worden op basis van een array bestaande uit drie emoji's. Tot slot zie je onderaan het script nog een tweetal redelijk complexe if-statements staan, 
+            waarmee er wel of geen tekst wordt getoond, afhankelijk van de waarden van de emoji variabelen.
+        </p>
+    </div>
+    
+    <script src="random.js"></script>
+
+    <!-- Deze lijnen voegen de code onderaan automatisch toe aan de pagina -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/monokai.min.css">
+    <script src="../../../resources/javascript/code-viewer.js"></script>
+</body>
+</html>
