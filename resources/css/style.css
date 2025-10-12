@@ -79,6 +79,10 @@ kbd {
 
 .page-content {
     padding: 40px 32px;
+    
+    img {
+        max-width: 100%;
+    }
 }
 
 .sidebar {

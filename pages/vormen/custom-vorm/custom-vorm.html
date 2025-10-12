@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../../libraries/p5.min.js"></script>
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+</head>
+<body>
+    <header class="page-header dark">
+        <h1>Custom vorm</h1>
+        <p>Dit werkt eigenlijk op dezelfde manier als de demo voor een lijn met meerdere punten. Nu is echter de vorm een stuk complexer, en maken we alleen gebruik van de fill en niet van een stroke</p>
+        <span class="info">Voor meer uitleg over het tekenen van custom vormen, zie: <a href="https://p5js.org/reference/p5/beginShape/" target="_blank">https://p5js.org/reference/p5/beginShape/</a></span>
+    </header>
+
+    <div class="page-content">
+        <div id="p5-container"></div>
+        <p>Deze pinquin is eerst getekend in Figma (door een bestaande afbeelding over te trekken), daarna zijn de x & y coördinaten van de punten 1 voor 1 over genomen en als vertices toegevoegd als custom shape</p>
+        <img src="./../../../resources/images/custom-vorm.jpg" alt="">
+        <p>
+            Om dit in P5 te doen, moet je eerst de beginShape() functie aanroepen, daarna voeg je met de vertex(x, y) functie alle punten toe, en als laatste roep je endShape() aan om de vorm af te maken.
+        </p>
+    </div>
+    
+    <script src="custom-vorm.js"></script>
+
+    <!-- Deze lijnen voegen de code onderaan automatisch toe aan de pagina -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/monokai.min.css">
+    <script src="../../../resources/javascript/code-viewer.js"></script>
+</body>
+</html>
