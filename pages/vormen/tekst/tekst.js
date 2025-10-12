@@ -14,9 +14,9 @@ function setup() {
 
     // Je kunt ook een tekstbox maken
     textSize(16);
-    let tekst = 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+    let tekst = 'Koude Willy had bijna het hoogste cijfer van het pinquin-quiz-examen.';
     // string, x, y, breedte, hoogte
-    text(tekst, 16, 200, 200, 80);
+    text(tekst, 16, 200, 80, 80);
     // Als je goed kijkt dan zie je dat de tekst niet buiten de box wordt getekend, 
     // doordat we een hoogte hebben meegegeven aan de text functie. Als we die zouden weghalen (dat is de laatste parameter) 
     // dan wordt de tekst niet vroegtijdig afgebroken.

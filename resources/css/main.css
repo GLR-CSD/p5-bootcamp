@@ -2,4 +2,5 @@
 body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    overflow-y: hidden; /* Dit zorgt ervoor dat de pagina niet scrollbaar is, alleen het zij menu en de inhoud van de iframe */
 }
