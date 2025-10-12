@@ -1,32 +1,51 @@
 const scriptTags = document.querySelectorAll("script")
 
-const appendScript = (src) => {
+const appendCodeContainer = () => {
+    const body = document.querySelector("body")
+    const codeContainer = document.createElement("div")
+    codeContainer.classList.add("code-container")
+    body.appendChild(codeContainer)
     
+    // Header
+    const codeContainerHeader = document.createElement("h3")
+    codeContainerHeader.innerText = "Broncode"
+    
+    // Content
+    const codeContainerContent = document.createElement("section")
+    codeContainerContent.classList.add("code-content")
+
+    // Footer
+    const codeContainerFooter = document.createElement("p")
+    codeContainerFooter.classList.add("code-container-footer")
+    codeContainerFooter.innerHTML = `Vergeet niet dat je altijd terug kunt naar de originele code door een <kbd>git checkout</kbd> uit te voeren in de <span title="sneltoets control + shift + \` in Visual Studio Code">terminal</span>. Dit verwijdert al je wijzigingen en zet de code terug naar de originele staat.`
+
+
+    codeContainer.appendChild(codeContainerHeader)
+    codeContainer.appendChild(codeContainerContent)
+    codeContainer.appendChild(codeContainerFooter)   
+}
+
+const appendScript = (src) => {
     // Container waar alles in komt te staan
-    const contentContainer = document.querySelector("body")
+    const contentContainer = document.querySelector(".code-content")
 
     // Aanmaken van HTML elementen
     const scriptContainer = document.createElement("div")
-    scriptContainer.classList.add("code-container")
+    scriptContainer.classList.add("code-content")
     
-    const scriptContainerHeader = document.createElement("div")
-    scriptContainerHeader.classList.add("code-container-header")
+    // const scriptContainerHeader = document.createElement("div")
+    // scriptContainerHeader.classList.add("code-content-header")
     
-    const scriptHeader = document.createElement("h3")
-    scriptHeader.innerText = "Broncode"
-    
-    const scriptSubHeader = document.createElement("p")
-    scriptSubHeader.classList.add("code-container-subheader")
+    // Content header
+    const contentHeader = document.createElement("p")
+    contentHeader.classList.add("code-content-subheader")
     const path = src.split("/")
     let fileName = ""
     for (let i = 3; i < path.length; i++) {
         fileName += "/" + path[i]
     }
-    scriptSubHeader.innerHTML = `Pas zelf de code aan door <kbd title='${fileName}'>${fileName}</kbd> te openen in Visual Studio Code en de code aan te passen.`
+    contentHeader.innerHTML = `Pas zelf de code aan door <kbd title='${fileName}'>${fileName}</kbd> te openen in Visual Studio Code en de onderstaande code aan te passen.`
     
-    const scriptFooter = document.createElement("p")
-    scriptFooter.classList.add("code-container-footer")
-    scriptFooter.innerHTML = `Vergeet niet dat je altijd terug kunt naar de originele code door een <kbd>git checkout</kbd> uit te voeren in de terminal. Dit verwijdert al je wijzigingen en zet de code terug naar de originele staat.`
     
     const codeContainer = document.createElement("pre")
     fetch(src)
@@ -37,16 +56,13 @@ const appendScript = (src) => {
     })
     
     // HTML elementen toevoegen aan de DOM
-    scriptContainerHeader.appendChild(scriptHeader)
-    scriptContainerHeader.appendChild(scriptSubHeader)
     scriptContainer.appendChild(codeContainer)
-    scriptContainer.appendChild(scriptFooter)
     
-    contentContainer.appendChild(scriptContainerHeader)
+    contentContainer.appendChild(contentHeader)
     contentContainer.appendChild(scriptContainer)
 }
    
-
+appendCodeContainer()
 
 scriptTags.forEach(tag => {
     if (tag.src.includes("/pages")) {

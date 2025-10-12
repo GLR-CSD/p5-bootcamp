@@ -142,12 +142,9 @@ kbd {
     }
 }
 
-.code-container-header {
-    padding: 0 32px;
-
-    h3 {
-        margin-top: 0;
-    }
+.code-container h3 {
+    margin-top: 0;
+    margin-left: 32px;
 }
 
 .code-container pre {
@@ -156,12 +153,18 @@ kbd {
     margin: 0;
     background-color: #222;
 }
-.code-container-subheader {
+
+.code-content-subheader {
     font-size: 14px;
     line-height: 1.8;
+    padding: 0 32px;
 }
+
 .code-container-footer {
     padding: 0 32px;
     font-size: 14px;
     line-height: 1.8;
+    [title] { 
+        border-bottom: 1px dotted currentColor;
+    }
 }
