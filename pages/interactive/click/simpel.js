@@ -1,8 +1,9 @@
 // Met deze 3 variabelen kun je de afmetingen en achtergrondkleur van het canvas aanpassen
 const canvasWidth = 600
 const canvasHeight = 400
-const backgroundColor = "black"
+const backgroundColor = "gold"
 const cirkelKleur = "white"
+const cirkelRandKleur = "goldenrod"
 const cirkels = []
 
 // De setup functie wordt één keer aangeroepen door P5 zodra de pagina geladen is
@@ -17,6 +18,8 @@ function setup() {
 
 function draw() {
     noStroke();
+    stroke(cirkelRandKleur);
+    strokeWeight(2);
     fill(cirkelKleur);
     cirkels.forEach(cirkel => {
         circle(cirkel.x, cirkel.y, cirkel.diameter)
@@ -25,7 +28,7 @@ function draw() {
 
 function mousePressed() {
     cirkels.push({
-        diameter: 32,
+        diameter: 40,
         x: mouseX,
         y: mouseY,
     })
