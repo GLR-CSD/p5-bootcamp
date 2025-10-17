@@ -91,6 +91,8 @@ kbd {
     margin: 0;
     padding: 40px 32px;
     grid-column: span 3;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
 
     ul {
         padding: 0;
