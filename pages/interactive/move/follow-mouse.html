@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../../libraries/p5.min.js"></script>
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+</head>
+<body>
+    <header class="page-header dark">
+        <h1>Muis volgen</h1>
+        <p>In iedere tekencyclus zal het rode stipje proberen naar de muis toe te bewegen wanneer je deze over het scherm beweegt.</p>
+    </header>
+
+    <div class="page-content">
+        <div id="p5-container"></div>
+        <p>
+            Dit script werkt doordat er een object is genaamd stip, waar we waarden van aanpassen op basis van de muispositie. 
+            In de draw functie checken we ieder frame de hoek tussen de muis en de stip, en updaten we de x & y positie op basis van de snelheid van de stip.
+            De snelheid zelf wordt ieder frame verhoogd met 0.2, en wordt verlaagd wanneer de stip in de buurt van de muis komt. 
+            Wanneer de stip héél dichtbij de muis is, dan zetten we de snelheid op 0 zodat de x & y positie niet langer meer van positie veranderd.
+        </p>
+    </div>
+    
+    <script src="follow-mouse.js"></script>
+
+    <!-- Deze lijnen voegen de code onderaan automatisch toe aan de pagina -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/monokai.min.css">
+    <script src="../../../resources/javascript/code-viewer.js"></script>
+</body>
+</html>

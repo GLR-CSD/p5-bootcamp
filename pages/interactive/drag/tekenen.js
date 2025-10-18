@@ -66,7 +66,7 @@ function draw() {
 function mousePressed() {
     // Check of er op een kleur is geklikt
     for (i=0; i<kleurPalet.length; i++) {
-        const inCircle = pointInCircle(mouseX, mouseY, 50, 50 + i*50, 32) // // Let op! Deze afmetingen moeten overeenkomen met de checks in de mousePressed functie
+        const inCircle = puntInCirkel(mouseX, mouseY, 50, 50 + i*50, 32) // // Let op! Deze afmetingen moeten overeenkomen met de checks in de mousePressed functie
         if (inCircle) {
             geselecteerdeKleur = kleurPalet[i]
             return; // Stop met de functie uitvoeren als er een kleur is geselecteerd
@@ -98,7 +98,7 @@ function mouseDragged() {
 }
 
 // Helper functie om te checken of een punt binnen een cirkel ligt
-function pointInCircle(x, y, cx, cy, r) {
+function puntInCirkel(x, y, cx, cy, r) {
     const dx = x - cx;
     const dy = y - cy;
     return (dx * dx + dy * dy) <= (r * r);
