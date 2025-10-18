@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../../libraries/p5.min.js"></script>
+    <link rel="stylesheet" href="../../../resources/css/style.css">
+</head>
+<body>
+    <header class="page-header dark">
+        <h1>Het regent karakters!</h1>
+        <p>Selecteer het canvas door op het witte vlak te tekenen. Druk daarna op de toetsen om de karakters naar beneden te laten vallen. Er zit ook een stukje code in die er voor zorgt dat de array met karakters wordt opgeschoond door karakters die buiten het scherm zijn gevallen automatisch worden verwijderd.</p>
+        <span class="info">Voor meer uitleg over de keyPressed functie, zie: <a href="https://p5js.org/reference/p5/keyPressed" target="_blank">https://p5js.org/reference/p5/keyPressed</a></span>
+    </header>
+
+    <div class="page-content">
+        <div id="p5-container"></div>
+        <p>
+            Om deze demo te laten werken, maken we gebruik van een array waar we alle karakters die je intypt in opslaan. 
+            Vervolgens loopen we door deze array en updaten we de y postitie zodat ze omlaag vallen.
+            Zodra ze buiten het scherm zijn gevallen, verwijderen we ze.
+        </p>
+    </div>
+    
+    <script src="karakters.js"></script>
+
+    <!-- Deze lijnen voegen de code onderaan automatisch toe aan de pagina -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/monokai.min.css">
+    <script src="../../../resources/javascript/code-viewer.js"></script>
+</body>
+</html>

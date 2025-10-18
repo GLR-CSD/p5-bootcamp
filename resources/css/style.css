@@ -184,3 +184,7 @@ kbd {
         border-bottom: 1px dotted currentColor;
     }
 }
+
+#p5-container canvas {
+    border: 1px solid #ccc;
+}
